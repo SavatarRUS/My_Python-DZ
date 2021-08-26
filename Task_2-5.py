@@ -2,18 +2,21 @@
 # У пользователя нужно запрашивать новый элемент рейтинга.
 # Если в рейтинге существуют элементы с одинаковыми значениями,
 # то новый элемент с тем же значением должен разместиться после них.
-print("<РЕЙТИНГ>")
-my_el = [7, 5, 3, 3, 2]
-while True:
-    in_value = int(input('Введите новый элемент рейтинга: '))
 
-    if my_el[-1] > in_value:
-        my_el.append(in_value)
-    elif my_el[0] < in_value:
-        my_el.insert(0, in_value)
-    else:
-        for el in my_el:
-            if in_value > el:
-                my_el.insert(my_el.index(el), in_value)
-                break
-    print(my_el)
+# Подсказка. Например, набор натуральных чисел: 7, 5, 3, 3, 2.
+# Пользователь ввёл число 3. Результат: 7, 5, 3, 3, 3, 2.
+# Пользователь ввёл число 8. Результат: 8, 7, 5, 3, 3, 2.
+# Пользователь ввёл число 1. Результат: 7, 5, 3, 3, 2, 1.
+# Набор натуральных чисел можно задать сразу в коде, например, my_list = [7, 5, 3, 3, 2].
+print("<РЕЙТИНГ>")
+my_list = [7, 5, 3, 3, 2]
+n = int(input("Введите новый элемент списка: "))
+newlist = []
+flag = False
+for elem in my_list :
+    if n >= elem and flag == False:
+        newlist.append(n)
+        flag = True
+    newlist.append(elem)
+
+print(newlist)

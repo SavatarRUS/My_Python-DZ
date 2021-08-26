@@ -9,14 +9,14 @@
 # Пользователь ввёл число 1. Результат: 7, 5, 3, 3, 2, 1.
 # Набор натуральных чисел можно задать сразу в коде, например, my_list = [7, 5, 3, 3, 2].
 print("<РЕЙТИНГ>")
-my_list = [7, 5, 3, 3, 2]
+my_el = [7, 5, 3, 3, 2]
 n = int(input("Введите новый элемент списка: "))
-newlist = []
+new_el = []
 flag = False
-for elem in my_list :
+for elem in my_el:
     if n >= elem and flag == False:
-        newlist.append(n)
+        new_el.append(n)
         flag = True
-    newlist.append(elem)
+    new_el.append(elem)
 
-print(newlist)
+print(new_el)

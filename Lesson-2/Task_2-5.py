@@ -1,6 +1,6 @@
 print("<РЕЙТИНГ>")
 my_el = [7, 5, 3, 3, 2]
-n = int(input("Введите новый элемент списка: "))
+n = float(input("Введите новый элемент списка: "))
 new_el = []
 flag = False
 for elem in my_el:

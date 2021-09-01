@@ -6,7 +6,7 @@ from sys import argv
 
 def my_script():
     try:
-        num = [int(_) for _ in argv[1:]]
+        num = [float(_) for _ in argv[1:]]
         return (num[0] * num[1]) + num[2]
     except ValueError:
         return 'Вы ввели недопустимое значение'
